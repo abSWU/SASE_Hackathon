@@ -53,11 +53,11 @@ Pro-Tip: Use a free tool like Giphy Capture or Kap to record a short, silent GIF
 Use a bulleted list to describe the key features of your project. Be specific!
 -->
 
-- **Feature 1:** `[Description of the first key feature.]`
+- **Searches Jobs by Company, Job Position, or Location:** `Users can query the database for jobs from a specific company, job position, and location of the job. `
 
-- **Feature 2:** `[Description of the second key feature.]`
+- **Filter by Pay and Pay Period:** `Users can filter jobs by either hourly or yearly wage and can specifiy a minimum pay threshold.`
 
-- **Feature 3:** `[Description of the third key feature.]`
+- **Shows Jobs Based on User Filters:** `The API combines all provided filters to return only the jobs that matches theu ser's criteria.`
 
 ## How We Built It
 
