@@ -42,14 +42,8 @@ def get_job_listings(company: Optional[str] = None, title: Optional[str] = None,
             query = query.filter(JobListing.pay_period==pay_period)
         jobs = query.all()
         if min_wage:
-            filtered_jobs = []
-            for job in jobs:
-                if job.max_salary:
-                    salary_float = float(job.max_salary)
-                    if salary_float >= min_wage:
-                        filtered_jobs.append(job)
-            jobs = filtered_jobs
-        return jobs
+            query = query.filter(cast(JobListing.max_salary, Float) >=min_wage)
+        return query.all()
     except psycopg2.OperationalError as error:
         print(f"Connection failed: {error}")
         raise error
