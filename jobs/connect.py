@@ -1,5 +1,5 @@
 import psycopg2
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, func
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, cast, Float
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship, joinedload
 from typing import List, Optional
 
