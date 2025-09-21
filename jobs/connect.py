@@ -1,9 +1,11 @@
 import psycopg2
-from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, ForeignKey, func
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship, joinedload
 from typing import List, Optional
 
+
 conn_string = 'postgresql://neondb_owner:npg_zEbPwa1MH4yn@ep-quiet-art-ad4atrd6-pooler.c-2.us-east-1.aws.neon.tech/relational?sslmode=require&channel_binding=require'
+
 
 engine = create_engine(conn_string)
 Base = declarative_base()
@@ -28,7 +30,7 @@ Session = sessionmaker(bind=engine)
 
 Base.metadata.create_all(engine)
 
-def get_job_listings(company: Optional[str] = None, title: Optional[str] = None) -> List[JobListing]:
+def get_job_listings(company: Optional[str] = None, title: Optional[str] = None, pay_period: Optional[str] = None, min_wage: Optional[int] = None ) -> List[JobListing]:
     session = Session()
     try: 
         query = session.query(JobListing).options(joinedload(JobListing.company))
@@ -36,7 +38,18 @@ def get_job_listings(company: Optional[str] = None, title: Optional[str] = None)
             query = query.join(Company).filter(Company.company_name.ilike(f"%{company}%"))
         if title:
             query = query.filter(JobListing.title.ilike(f"%{title}%"))
-        return query.all()
+        if pay_period:
+            query = query.filter(JobListing.pay_period==pay_period)
+        jobs = query.all()
+        if min_wage:
+            filtered_jobs = []
+            for job in jobs:
+                if job.max_salary:
+                    salary_float = float(job.max_salary)
+                    if salary_float >= min_wage:
+                        filtered_jobs.append(job)
+            jobs = filtered_jobs
+        return jobs
     except psycopg2.OperationalError as error:
         print(f"Connection failed: {error}")
         raise error
