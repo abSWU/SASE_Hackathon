@@ -65,7 +65,7 @@ Use a bulleted list to describe the key features of your project. Be specific!
 List the technologies, frameworks, and APIs you used. This is a great way to show off your technical skills to judges and recruiters.
 -->
 
-- **Frontend:** `React, `
+- **Frontend:** `React, Node.js `
 
 - **Backend:** `Python, FastAPI, SQLAlchemy`
 
@@ -85,7 +85,7 @@ Every project has challenges! This is a great place to show your problem-solving
 * How did you overcome it?
 -->
 
-`[Describe a challenge your team faced and how you solved it.]`
+`One of the biggest challenges our team faced was that most of us were using the tools in this project for the first time. While some team members had some prior experience with certain tools, we had to quickly learn FastAPI, database querying, and how to integrate the backend with the frontend. Balancing learning new tech while building a working project made us work together closely and solve problems under the time pressure.`
 
 ## Accomplishments We're Proud Of
 
@@ -99,7 +99,7 @@ What are you most proud of?
 * Did your team collaborate effectively?
 -->
 
-`Everyone on the team is proud that we all learned new things. All of us had little to no experience with the tools involved to make a project like this. Not only were we able to make a working product at the end, but we also learned new tools that we can use in our future projects.`
+`Despite being new to most of the tools, our team successfully built a function project from scratch. We not only learned how to write a frontend and backend and then integrate them, but we also learned to collaborate efficiently under tight deadlines. In the end, we had a working product, gained skills in FastAPI and database management, and strengthened our teamwork, all of which that can help us in our future projects. `
 
 ## What We Learned
 
@@ -107,7 +107,7 @@ What are you most proud of?
 Hackathons are all about learning! What new skills or concepts did you learn during this project?
 -->
 
-`[Mention 1-2 key things you learned.]`
+`During this project, we learned how to write a frontend and backend and how to integrate them. We learned how to write the backend with FastAPI and the frontend interface was built with React and Node.js to handle and display custom user input and output. We also gained experience with deploying and testing database queries efficiently, which improved our understanding of backend data flow and API design.`
 
 ## What's Next for
 
