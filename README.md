@@ -57,7 +57,7 @@ Use a bulleted list to describe the key features of your project. Be specific!
 
 - **Filter by Pay and Pay Period:** `Users can filter jobs by either hourly or yearly wage and can specifiy a minimum pay threshold.`
 
-- **Shows Jobs Based on User Filters:** `The API combines all provided filters to return only the jobs that matches theu ser's criteria.`
+- **Shows Jobs Based on User Filters:** `The API combines all provided filters to return only the jobs that matches the user's criteria.`
 
 ## How We Built It
 
@@ -65,11 +65,11 @@ Use a bulleted list to describe the key features of your project. Be specific!
 List the technologies, frameworks, and APIs you used. This is a great way to show off your technical skills to judges and recruiters.
 -->
 
-- **Frontend:** `[e.g., React, Vite, Tailwind CSS]`
+- **Frontend:** `React, `
 
-- **Backend:** `[e.g., Python, Flask]`
+- **Backend:** `Python, FastAPI, SQLAlchemy`
 
-- **APIs:** `[e.g., Google Maps API, Plaid API]`
+- **APIs:** `Neon PostgreSQL`
 
 - **Deployment:** `[e.g., Vercel, Netlify, Render]`
 
@@ -99,7 +99,7 @@ What are you most proud of?
 * Did your team collaborate effectively?
 -->
 
-`[Share something your team is particularly proud of.]`
+`Everyone on the team is proud that we all learned new things. All of us had little to no experience with the tools involved to make a project like this. Not only were we able to make a working product at the end, but we also learned new tools that we can use in our future projects.`
 
 ## What We Learned
 
